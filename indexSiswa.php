@@ -136,9 +136,23 @@ $guru = query("SELECT * FROM guru  ");
                         <th>Nilai 1</th>
                         <th>Nilai 2</th>
                         <th>Nilai 3</th>
+                        <th>Rata - Rata</th>
+                        <th>Grade</th>
+                    
                     
                     <?php $i = 1; ?>
-                    <?php foreach( $nilai as $row) :?>
+                    <?php foreach( $nilai as $row) :
+                    $a = $row['nilai1'];
+                    $b = $row['nilai2'];
+                    $c = $row['nilai3'];
+                    $rt = ($a + $b + $c) /3;
+                    if ($rt >= 90){
+                    $grade = "A";
+                  }elseif ($rt >= 70){
+                    $grade = "B";
+                      }else {
+                    $grade = "C";
+                      }?>
                     </tr>
                 </thead>
                 <tbody>
@@ -152,6 +166,8 @@ $guru = query("SELECT * FROM guru  ");
                         <td><?= $row["nilai1"];?></td>
                         <td><?= $row["nilai2"];?></td>
                         <td><?= $row["nilai3"];?></td>
+                        <td><?= $rt?></td>
+                        <td><?= $grade?></td>
                         
                 </tr>
                 <?php $i++?>

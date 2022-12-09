@@ -130,10 +130,11 @@ $guru = query("SELECT * FROM guru  ");
                     <tr> 
                         <th>No.</th>
                         <th>Nisn</th>
+                        <th>Mapel</th>
                         <th>Nilai 1</th>
                         <th>Nilai 2</th>
                         <th>Nilai 3</th>
-                        <th>Aksi</th>
+                        
                     <?php $i = 1; ?>
                     <?php foreach( $nilai as $row) :?>
                     </tr>
@@ -143,6 +144,7 @@ $guru = query("SELECT * FROM guru  ");
                         <td><?= $i; ?></td>
                         
                         <td><?= $row["nisn"];?></td>
+                        <td><?= $row["mapel"];?></td>
                         <td><?= $row["nilai1"];?></td>
                         <td><?= $row["nilai2"];?></td>
                         <td><?= $row["nilai3"];?></td>
@@ -184,7 +186,7 @@ $guru = query("SELECT * FROM guru  ");
                 <?php endforeach;?>
                 </tbody>
             </table>
-        <button class=" btn btn-primary "> <a class="text-white text-decoration-none" href="insertGuru/insertMaple.php">Tambah Data</a></button>
+        
         </div>          
     </section>
 
@@ -219,10 +221,7 @@ $guru = query("SELECT * FROM guru  ");
                 <?php endforeach;?>
                 </tbody>
             </table>
-            <button class=" btn btn-primary "> 
-                <a class="text-white text-decoration-none" href="insertGuru/insertGuru.php">Tambah Data</a> 
-                
-            </button>
+          
         </div>          
 </section>
 

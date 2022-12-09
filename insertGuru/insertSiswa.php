@@ -74,6 +74,7 @@ if( isset($_POST['submit'])){
     <div class="col-lg-6 mt-lg-5">
         <form action="" method="POST">
                 <h1 class="text-center mb-5">Tambah Data Siswa</h1>
+                <input type="hidden" name="id" id="id">
                 <div class="mb-3">
                     <label for="nisn" class="form-label">Nisn</label>
                     <input type="text" class="form-control" id="nisn" name="nisn" >

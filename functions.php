@@ -26,15 +26,16 @@
         return mysqli_affected_rows($conn);
     }
     function tambah2($data){
-
+        
         $nisn       = htmlspecialchars($data['nisn']);
+        $mapel      = htmlspecialchars($data['mapel']);
         $nilai1     = htmlspecialchars($data['nilai1']);
         $nilai2     = htmlspecialchars($data['nilai2']);
         $nilai3     = htmlspecialchars($data['nilai3']);
         $SISWA_nisn = htmlspecialchars($data['SISWA_nisn']);
 
         global $conn;
-        $query = "INSERT INTO nilai VALUES ('','$nisn','$nilai1','$nilai2','$nilai3','$SISWA_nisn')";
+        $query = "INSERT INTO nilai VALUES ('','$nisn','$mapel','$nilai1','$nilai2','$nilai3','$SISWA_nisn')";
         mysqli_query($conn,$query);
         return mysqli_affected_rows($conn);
     }

@@ -10,14 +10,14 @@
         echo "
                 <script>
                     alert('data has been edited');
-                    location.href='../index.php';
+                    location.href='../indexAdmin.php';
                 </script>
         ";
     }else{
         echo "
                 <script>
                     alert('data faileed to edit');
-                    location.href='../index.php';
+                    location.href='../indexAdmin.php';
                 </script>
         ";
     }

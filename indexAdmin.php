@@ -113,7 +113,7 @@ $guru = query("SELECT * FROM guru  ");
                             <div>
                                 <a href="delete/deleteSiswa.php?nisn=<?=$row["nisn"]?>">Hapus</a> | <a href="Edit/EditSiswa.php?nisn=<?= $row["nisn"];?>">EDIT</a>
                             </div>
-                        </td>
+                        </td>-
                 </tr>
                 <?php $i++?>
                 <?php endforeach;?>
@@ -131,6 +131,7 @@ $guru = query("SELECT * FROM guru  ");
                     <tr> 
                         <th>No.</th>
                         <th>Nisn</th>
+                        <th>Mapel</th>
                         <th>Nilai 1</th>
                         <th>Nilai 2</th>
                         <th>Nilai 3</th>
@@ -144,6 +145,7 @@ $guru = query("SELECT * FROM guru  ");
                         <td><?= $i; ?></td>
                         
                         <td><?= $row["nisn"];?></td>
+                        <td><?= $row["mapel"];?></td>
                         <td><?= $row["nilai1"];?></td>
                         <td><?= $row["nilai2"];?></td>
                         <td><?= $row["nilai3"];?></td>

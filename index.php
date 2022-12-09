@@ -8,12 +8,14 @@
 </head>
 <body>
     
-	<h1>LOGIN</h1>
+	<h1 class="text-center mt-5 mb-5">LOGIN</h1>
 
 	<?php 
 	if(isset($_GET['pesan'])){
 		if($_GET['pesan']=="gagal"){
-			echo "<div class='alert'>Username dan Password tidak sesuai !</div>";
+			echo "<script>
+						alert('Login Failed');
+				    </script>";
 		}
 	}
 	?>
@@ -22,21 +24,23 @@
   <div class="wave"></div>
 </div>
 	<div class="kotak_login">
-		<p class="tulisan_login">Silahkan login</p>
+		<h4 class="text-center">Silahkan login</h4>
 
-	<div class="container">
-		<div class="col-lg-8">
+	<div class="container d-flex justify-content-center">
+		<div class="col-md-5">
 
 			<form action="confirmLogin.php" method="post">
-				<label class="form-label">Username</label>
+				<label class="form-label fs-4 text-center">Username</label>
 				<input type="text" name="username" class="form-control" placeholder="Username .." required="required">
 	
 	
-				<label class="form-label">Password</label>
+				<label class="form-label fs-4 text-center">Password</label>
 				<input type="password" name="password" class="form-control" placeholder="Password .." required="required">
 	
-	
-				<input type="submit" class="btn btn-primary text-white " value="LOGIN">
+			<div class="d-flex justify-content-center">
+
+				<input type="submit" class="btn btn-primary text-white mt-5 col-lg-5 " value="LOGIN">
+			</div>
 	
 	
 				<br/>

@@ -75,6 +75,10 @@ if( isset($_POST['submit'])){
                     <input type="text" class="form-control" id="nisn" name="nisn" >
                 </div>
                 <div class="mb-3">
+                    <label for="mapel" class="form-label">Mapel</label>
+                    <input type="text" class="form-control" id="mapel" name="mapel" >
+                </div>
+                <div class="mb-3">
                     <label for="nilai1" class="form-label">Nilai 1</label>
                     <input type="number" class="form-control" id="nilai1" name="nilai1">
                 </div>
